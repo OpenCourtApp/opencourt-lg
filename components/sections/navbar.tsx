@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { OpenCourtWordmark } from "@/components/oc-logo";
 import { cn } from "@/lib/utils";
-import { APP_URL } from "@/lib/site";
 
 const links = [
   { label: "Recursos", href: "#recursos" },
@@ -69,14 +68,14 @@ export function Navbar() {
 
         <div className="hidden items-center gap-2 md:flex">
           <Button
-            href={APP_URL}
+            href="https://opencourtapp.vercel.app/login"
             variant="ghost"
             size="sm"
             className={cn(!solid && "text-white hover:bg-white/10")}
           >
             Entrar
           </Button>
-          <Button href={APP_URL} size="sm">
+          <Button href="https://opencourtapp.vercel.app/register" size="sm">
             Começar grátis
           </Button>
         </div>
@@ -117,10 +116,10 @@ export function Navbar() {
               </a>
             ))}
             <div className="mt-2 flex flex-col gap-2">
-              <Button href={APP_URL} variant="secondary" size="sm">
+              <Button href="https://opencourtapp.vercel.app/login" variant="secondary" size="sm">
                 Entrar
               </Button>
-              <Button href={APP_URL} size="sm">
+              <Button href="https://opencourtapp.vercel.app/register" size="sm">
                 Começar grátis
               </Button>
             </div>

@@ -23,7 +23,7 @@ const plans = [
       "Login com Google",
     ],
     cta: "Começar grátis",
-    href: APP_URL,
+    href: "https://opencourtapp.vercel.app/register",
     variant: "secondary" as const,
     featured: false,
   },

@@ -1,7 +1,7 @@
 import { RiArrowRightLine, RiGoogleFill } from "@remixicon/react";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
-import { APP_URL } from "@/lib/site";
+
 
 export function FinalCta() {
   return (
@@ -17,7 +17,7 @@ export function FinalCta() {
             poucos minutos.
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <Button href={APP_URL} size="lg" className="w-full sm:w-auto">
+            <Button href="https://opencourtapp.vercel.app/register" size="lg" className="w-full sm:w-auto">
               Criar minha escola
               <RiArrowRightLine className="size-4" />
             </Button>

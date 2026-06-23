@@ -85,21 +85,25 @@ export function Features() {
         </SectionLede>
       </div>
 
-      <div className="mt-12 grid gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
-        {features.map((f) => (
-          <motion.div
-            key={f.title}
-            initial="rest"
-            whileHover="hover"
-            className="bg-card p-6"
-          >
-            <div className="inline-flex size-10 items-center justify-center rounded-lg border border-border bg-background">
-              <AnimatedIcon icon={f.icon} variants={f.anim} className="size-5" />
-            </div>
-            <h3 className="mt-4 text-base font-semibold">{f.title}</h3>
-            <p className="mt-1.5 text-sm text-muted-foreground">{f.desc}</p>
-          </motion.div>
-        ))}
+      {/* Single block with internal dividers; the animated glow rides only the
+          outer ring (p-px), the opaque inner grid covers everything else. */}
+      <div className="glow-border mt-12 rounded-2xl p-px">
+        <div className="relative z-10 grid gap-px overflow-hidden rounded-[13px] bg-border sm:grid-cols-2 lg:grid-cols-3">
+          {features.map((f) => (
+            <motion.div
+              key={f.title}
+              initial="rest"
+              whileHover="hover"
+              className="bg-card p-6"
+            >
+              <div className="inline-flex size-10 items-center justify-center rounded-lg border border-border bg-background">
+                <AnimatedIcon icon={f.icon} variants={f.anim} className="size-5" />
+              </div>
+              <h3 className="mt-4 text-base font-semibold">{f.title}</h3>
+              <p className="mt-1.5 text-sm text-muted-foreground">{f.desc}</p>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </Section>
   );

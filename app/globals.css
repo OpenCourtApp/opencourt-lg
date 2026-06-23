@@ -123,3 +123,40 @@
     mask-image: radial-gradient(ellipse at center, #000 0%, transparent 75%);
   }
 }
+
+/* ── Animated border glow ──────────────────────────────────────────────
+   A rotating conic gradient sits behind the element (via `transform`, robust
+   across HMR — no @property needed). The element uses `p-px` plus an opaque
+   inner child (z-10) so only the 1px OUTER border ring shows the moving arc.
+   Used on the Recursos block's outer edge. */
+.glow-border {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.glow-border::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 175%;
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  background: conic-gradient(
+    var(--border),
+    var(--border) 0.5turn,
+    var(--foreground) 0.7turn,
+    var(--border) 0.88turn,
+    var(--border)
+  );
+  opacity: var(--glow-opacity, 1);
+  animation: glow-spin 5s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes glow-spin {
+  to {
+    transform: translate(-50%, -50%) rotate(1turn);
+  }
+}

@@ -14,6 +14,7 @@ export function FeatureDashboard() {
       ]}
       src="/group-dashboard.png"
       alt="Painel do OpenCourt com ocupação das quadras ao vivo"
+      priority
     />
   );
 }

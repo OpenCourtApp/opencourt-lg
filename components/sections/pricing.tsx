@@ -1,6 +1,6 @@
+import type { CSSProperties } from "react";
 import { RiCheckLine } from "@remixicon/react";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
 import { APP_URL } from "@/lib/site";
 import {
   Eyebrow,
@@ -62,37 +62,43 @@ export function Pricing() {
         {plans.map((p) => (
           <div
             key={p.name}
-            className={cn(
-              "flex flex-col rounded-xl border bg-card p-6",
-              p.featured ? "border-foreground/20 ring-1 ring-foreground/10" : "border-border",
-            )}
+            style={
+              p.featured
+                ? undefined
+                : ({ "--glow-opacity": "0.3" } as CSSProperties)
+            }
+            className="glow-border rounded-2xl p-px"
           >
-            <div className="flex items-center justify-between">
-              <h3 className="font-semibold">{p.name}</h3>
-              {p.featured ? (
-                <span className="rounded-full border border-border px-2 py-0.5 text-[11px] text-muted-foreground">
-                  Recomendado
+            <div className="relative z-10 flex h-full flex-col rounded-[13px] bg-card p-6">
+              <div className="flex items-center justify-between">
+                <h3 className="font-semibold">{p.name}</h3>
+                {p.featured ? (
+                  <span className="rounded-full border border-border px-2 py-0.5 text-[11px] text-muted-foreground">
+                    Recomendado
+                  </span>
+                ) : null}
+              </div>
+              <div className="mt-4 flex items-baseline gap-1.5">
+                <span className="text-3xl font-semibold tracking-tight">
+                  {p.price}
                 </span>
-              ) : null}
+                <span className="text-sm text-muted-foreground">
+                  {p.cadence}
+                </span>
+              </div>
+              <p className="mt-2 text-sm text-muted-foreground">{p.desc}</p>
+              <ul className="mt-6 flex-1 space-y-3">
+                {p.features.map((f) => (
+                  <li key={f} className="flex items-start gap-3 text-sm">
+                    <RiCheckLine className="mt-0.5 size-4 shrink-0" />
+                    <span>{f}</span>
+                  </li>
+                ))}
+              </ul>
+              <Button href={p.href} variant={p.variant} className="mt-6 w-full">
+                {p.cta}
+              </Button>
             </div>
-            <div className="mt-4 flex items-baseline gap-1.5">
-              <span className="text-3xl font-semibold tracking-tight">
-                {p.price}
-              </span>
-              <span className="text-sm text-muted-foreground">{p.cadence}</span>
-            </div>
-            <p className="mt-2 text-sm text-muted-foreground">{p.desc}</p>
-            <ul className="mt-6 flex-1 space-y-3">
-              {p.features.map((f) => (
-                <li key={f} className="flex items-start gap-3 text-sm">
-                  <RiCheckLine className="mt-0.5 size-4 shrink-0" />
-                  <span>{f}</span>
-                </li>
-              ))}
-            </ul>
-            <Button href={p.href} variant={p.variant} className="mt-6 w-full">
-              {p.cta}
-            </Button>
           </div>
         ))}
       </div>

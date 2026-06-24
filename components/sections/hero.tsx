@@ -2,11 +2,11 @@ import { RiArrowRightLine, RiGoogleFill } from "@remixicon/react";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { Shot } from "@/components/ui/shot";
-
+import { TextAnimate } from "@/components/ui/text-animate";
 
 export function Hero() {
   return (
-    <section id="topo" className="relative overflow-hidden border-b border-border">
+    <section id="topo" className="relative overflow-hidden">
       {/* Court photo — the hero's focal background (full color, fully visible). */}
       <div
         aria-hidden
@@ -33,21 +33,38 @@ export function Hero() {
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white/70" />
                 <span className="relative inline-flex size-2 rounded-full bg-white" />
               </span>
-              Gestão de quadras para escolas
+              Gestão de quadras para escolas e clubes
             </span>
 
-            <h1 className="mt-6 text-4xl font-semibold tracking-tight text-balance sm:text-6xl">
-              As quadras da sua escola, sob controle.
-            </h1>
+            <TextAnimate
+              as="h1"
+              by="word"
+              animation="blurInUp"
+              once
+              className="mt-6 text-4xl font-semibold tracking-tight text-balance sm:text-6xl"
+            >
+              As quadras da sua escola ou clube, sob controle.
+            </TextAnimate>
 
-            <p className="mx-auto mt-5 max-w-xl text-lg text-white/85 text-pretty">
+            <TextAnimate
+              as="p"
+              by="word"
+              animation="fadeIn"
+              once
+              delay={0.1}
+              className="mx-auto mt-5 max-w-xl text-lg text-white/85 text-pretty"
+            >
               Reservas, calendário e ocupação em um só lugar. Sem planilha, sem
               papel, sem conflito de horário.
-            </p>
+            </TextAnimate>
 
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <Button href="https://opencourtapp.vercel.app/register" size="lg" className="w-full sm:w-auto">
-                Criar minha escola
+              <Button
+                href="https://opencourtapp.vercel.app/register"
+                size="lg"
+                className="w-full sm:w-auto"
+              >
+                Criar minha conta
                 <RiArrowRightLine className="size-4" />
               </Button>
               <Button
@@ -68,8 +85,7 @@ export function Hero() {
         </Container>
 
         <div className="mx-auto mt-16 w-full max-w-7xl px-6">
-          {/* Subtle glass frame around the demo video: a translucent border + a
-              faint blurred ring. Not liquid-glass — just a frame. */}
+          {/* Subtle glass frame around the demo video. */}
           <div className="rounded-[1.75rem] border border-white/30 bg-white/15 p-2 shadow-xl shadow-black/10 backdrop-blur-md sm:p-3">
             <Shot className="rounded-2xl">
               <video

@@ -2,6 +2,7 @@ import { RiCheckLine } from "@remixicon/react";
 import { cn } from "@/lib/utils";
 import { Container } from "./container";
 import { Eyebrow } from "./section";
+import { TextAnimate } from "./text-animate";
 
 /** Text + product-visual row used by the feature highlight sections. */
 export function FeatureSplit({
@@ -35,9 +36,15 @@ export function FeatureSplit({
       >
         <div className={cn(reverse && "lg:order-2")}>
           <Eyebrow>{eyebrow}</Eyebrow>
-          <h2 className="mt-3 text-3xl font-semibold tracking-tight text-balance sm:text-4xl">
+          <TextAnimate
+            as="h2"
+            by="word"
+            animation="blurInUp"
+            once
+            className="mt-3 text-3xl font-semibold tracking-tight text-balance sm:text-4xl"
+          >
             {title}
-          </h2>
+          </TextAnimate>
           <p className="mt-4 text-lg text-muted-foreground text-pretty">
             {lede}
           </p>

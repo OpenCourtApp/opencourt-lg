@@ -14,9 +14,9 @@ const plans = [
     name: "Grátis",
     price: "R$ 0",
     cadence: "para sempre",
-    desc: "Para uma escola começar a se organizar hoje.",
+    desc: "Para uma escola ou clube começar a se organizar hoje.",
     features: [
-      "1 escola",
+      "1 escola ou clube",
       "Quadras ilimitadas",
       "Painel ao vivo e calendário",
       "Convites para a equipe",
@@ -30,12 +30,12 @@ const plans = [
   {
     name: "Escola",
     price: "Sob consulta",
-    cadence: "por escola",
-    desc: "Para redes e escolas que precisam de mais.",
+    cadence: "por unidade",
+    desc: "Para redes e clubes que precisam de mais.",
     features: [
       "Tudo do plano Grátis",
       "Colaboradores ilimitados",
-      "Múltiplas escolas",
+      "Múltiplas unidades",
       "Avisos por email",
       "Suporte prioritário",
     ],

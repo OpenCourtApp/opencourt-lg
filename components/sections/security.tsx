@@ -22,8 +22,8 @@ const items: Item[] = [
   {
     icon: Building2,
     anim: raise,
-    title: "Isolamento por escola",
-    desc: "Proteção no nível do banco de dados: uma escola nunca enxerga os dados de outra.",
+    title: "Isolamento por organização",
+    desc: "Proteção no nível do banco de dados: uma organização nunca enxerga os dados de outra.",
   },
   {
     icon: Lock,
@@ -35,7 +35,7 @@ const items: Item[] = [
     icon: KeyRound,
     anim: spin,
     title: "Login com Google",
-    desc: "Entrada segura, sem mais uma senha pra escola gerenciar.",
+    desc: "Entrada segura, sem mais uma senha pra gerenciar.",
   },
 ];
 
@@ -44,7 +44,7 @@ export function Security() {
     <Section className="border-b border-border bg-muted/30">
       <div className="mx-auto max-w-2xl text-center">
         <Eyebrow>Segurança & privacidade</Eyebrow>
-        <SectionHeading>Cada escola, um espaço isolado.</SectionHeading>
+        <SectionHeading>Cada organização, um espaço isolado.</SectionHeading>
         <SectionLede>
           Dados de escola pedem cuidado. Por isso o isolamento é garantido no
           nível mais profundo — o banco de dados — e não só na tela.

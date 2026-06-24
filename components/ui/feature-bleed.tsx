@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { RiCheckLine } from "@remixicon/react";
 import { Eyebrow } from "./section";
+import { TextAnimate } from "./text-animate";
 
 /**
  * Text on the left, product screenshot on the right. On desktop the screenshot
@@ -36,9 +37,15 @@ export function FeatureBleed({
         <div className="py-16 lg:py-0">
           <div className="max-w-md">
             <Eyebrow>{eyebrow}</Eyebrow>
-            <h2 className="mt-3 text-3xl font-semibold tracking-tight text-balance sm:text-4xl">
+            <TextAnimate
+              as="h2"
+              by="word"
+              animation="blurInUp"
+              once
+              className="mt-3 text-3xl font-semibold tracking-tight text-balance sm:text-4xl"
+            >
               {title}
-            </h2>
+            </TextAnimate>
             <p className="mt-4 text-lg text-muted-foreground text-pretty">
               {lede}
             </p>

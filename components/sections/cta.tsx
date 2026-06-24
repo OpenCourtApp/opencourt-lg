@@ -1,24 +1,33 @@
 import { RiArrowRightLine, RiGoogleFill } from "@remixicon/react";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
-
+import { TextAnimate } from "@/components/ui/text-animate";
 
 export function FinalCta() {
   return (
     <section id="cta" className="py-24 sm:py-32">
-
       <Container>
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-semibold tracking-tight text-balance sm:text-5xl">
+          <TextAnimate
+            as="h2"
+            by="word"
+            animation="blurInUp"
+            once
+            className="text-3xl font-semibold tracking-tight text-balance sm:text-5xl"
+          >
             Comece a organizar suas quadras hoje.
-          </h2>
+          </TextAnimate>
           <p className="mx-auto mt-4 max-w-lg text-lg text-muted-foreground text-pretty">
-            Crie a escola, cadastre as quadras e faça a primeira reserva em
+            Crie sua conta, cadastre as quadras e faça a primeira reserva em
             poucos minutos.
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <Button href="https://opencourtapp.vercel.app/register" size="lg" className="w-full sm:w-auto">
-              Criar minha escola
+            <Button
+              href="https://opencourtapp.vercel.app/register"
+              size="lg"
+              className="w-full sm:w-auto"
+            >
+              Criar minha conta
               <RiArrowRightLine className="size-4" />
             </Button>
             <Button

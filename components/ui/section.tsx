@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import { Container } from "./container";
+import { TextAnimate } from "./text-animate";
 
 /** A vertically padded page section with a centered content container. */
 export function Section({
@@ -44,18 +45,22 @@ export function SectionHeading({
   children,
   className,
 }: {
-  children: React.ReactNode;
+  children: string;
   className?: string;
 }) {
   return (
-    <h2
+    <TextAnimate
+      as="h2"
+      by="word"
+      animation="blurInUp"
+      once
       className={cn(
         "mt-3 text-3xl font-semibold tracking-tight text-balance sm:text-4xl",
         className,
       )}
     >
       {children}
-    </h2>
+    </TextAnimate>
   );
 }
 

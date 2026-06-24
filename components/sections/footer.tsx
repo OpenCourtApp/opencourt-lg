@@ -37,7 +37,7 @@ export function Footer() {
           <div>
             <OpenCourtWordmark />
             <p className="mt-3 max-w-xs text-sm text-muted-foreground text-pretty">
-              As quadras da sua escola, organizadas em um só lugar.
+              As quadras da sua escola ou clube, organizadas em um só lugar.
             </p>
             <div className="mt-4 flex items-center gap-2">
               <a
@@ -75,7 +75,9 @@ export function Footer() {
           <p className="text-xs text-muted-foreground">
             © {new Date().getFullYear()} OpenCourt. Todos os direitos reservados.
           </p>
-          <p className="text-xs text-muted-foreground">Feito para escolas.</p>
+          <p className="text-xs text-muted-foreground">
+            Feito para escolas e clubes.
+          </p>
         </div>
       </Container>
     </footer>

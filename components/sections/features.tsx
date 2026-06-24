@@ -56,7 +56,7 @@ const features: Feature[] = [
     icon: LandPlot,
     anim: bounce,
     title: "Gestão de quadras",
-    desc: "Cadastre, renomeie e organize todos os espaços da escola.",
+    desc: "Cadastre, renomeie e organize todos os seus espaços esportivos.",
   },
   {
     icon: Users,
@@ -78,7 +78,7 @@ export function Features() {
       <div className="mx-auto max-w-2xl text-center">
         <Eyebrow>Recursos</Eyebrow>
         <SectionHeading>
-          Tudo que a escola precisa pra gerir as quadras.
+          Tudo que escolas e clubes precisam pra gerir as quadras.
         </SectionHeading>
         <SectionLede>
           Do agendamento do dia a dia ao controle de quem pode o quê.
